@@ -45,7 +45,7 @@ export const transformProduct = (product) => {
   product.type_value = product.type && product.type.value
   product.collection_title = product.collection && product.collection.title
   product.collection_handle = product.collection && product.collection.handle
-  product.tags_value = product.tags ? product.tags.map((t) => t.value.replace(/ /g, '-')) : []
+  product.tags_value = product.tags ? product.tags.map((t) => t.value.toLowerCase().replace(/ /g, '-')) : []
 
   return {
     ...product,
