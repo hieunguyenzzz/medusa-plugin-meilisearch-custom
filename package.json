@@ -1,12 +1,12 @@
 {
   "name": "medusa-plugin-custom-meilisearch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "custom meilisearch plugin for personal medusa project",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/medusa",
-    "directory": "packages/medusa-plugin-meilisearch"
+    "url": "https://github.com/hieunguyenzzz/medusa-plugin-meilisearch-custom",
+    "directory": "packages/medusa-plugin-meilisearch-custom"
   },
   "author": "Hieu",
   "license": "MIT",

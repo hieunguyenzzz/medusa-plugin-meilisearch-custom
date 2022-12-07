@@ -6,12 +6,15 @@ const variantKeys = [
   "mid_code",
   "hs_code",
   "options",
+  "metadata"
 ]
 const prefix = `variant`
 
 export const transformProduct = (product) => {
   const initialObj = variantKeys.reduce((obj, key) => {
-    obj[`${prefix}_${key}`] = []
+    obj[`${prefix}_${key}`] = [];
+    obj[`${prefix}_metadata_color`] = [];
+    obj[`${prefix}_metadata_material`] = [];
     return obj
   }, {})
   initialObj[`${prefix}_options_value`] = []
@@ -22,6 +25,15 @@ export const transformProduct = (product) => {
         const values = variant[k].map((option) => option.value)
         obj[`${prefix}_options_value`] =
           obj[`${prefix}_options_value`].concat(values)
+        return
+      }
+
+      if (k === 'metadata' && variant[k]['color']) {
+        obj[`${prefix}_metadata_color`].push(variant[k]['color'])
+        return
+      }
+      if (k === 'metadata' && variant[k]['material']) {
+        obj[`${prefix}_metadata_material`].push(variant[k]['material'])
         return
       }
       return variant[k] && obj[`${prefix}_${k}`].push(variant[k])
