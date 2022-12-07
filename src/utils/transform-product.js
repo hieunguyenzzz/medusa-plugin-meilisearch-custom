@@ -28,11 +28,11 @@ export const transformProduct = (product) => {
         return
       }
 
-      if (k === 'metadata' && variant[k]['color']) {
+      if (k === 'metadata' && variant[k] && variant[k]['color']) {
         obj[`${prefix}_metadata_color`].push(variant[k]['color'])
         return
       }
-      if (k === 'metadata' && variant[k]['material']) {
+      if (k === 'metadata' && variant[k] && variant[k]['material']) {
         obj[`${prefix}_metadata_material`].push(variant[k]['material'])
         return
       }
