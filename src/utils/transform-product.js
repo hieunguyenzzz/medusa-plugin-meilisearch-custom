@@ -6,7 +6,8 @@ const variantKeys = [
   "mid_code",
   "hs_code",
   "options",
-  "metadata"
+  "metadata",
+  "prices"
 ]
 const prefix = `variant`
 
