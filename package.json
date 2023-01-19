@@ -1,6 +1,6 @@
 {
   "name": "medusa-plugin-custom-meilisearch",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "custom meilisearch plugin for personal medusa project",
   "main": "index.js",
   "repository": {
