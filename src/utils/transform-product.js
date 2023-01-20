@@ -39,7 +39,7 @@ export const transformProduct = (product) => {
         obj[`${prefix}_metadata_material`].push(variant[k]['material'])
         return
       }
-      
+      console.log(variant[k]);
       return variant[k] && obj[`${prefix}_${k}`].push(variant[k])
     })
     return obj
@@ -49,7 +49,7 @@ export const transformProduct = (product) => {
   product.collection_title = product.collection && product.collection.title
   product.collection_handle = product.collection && product.collection.handle
   product.tags_value = product.tags ? product.tags.map((t) => t.value.toLowerCase().replace(/ /g, '-')) : []
-
+  console.log(flattenedVariantFields);
   return {
     ...product,
     ...flattenedVariantFields,
